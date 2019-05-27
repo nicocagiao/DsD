@@ -153,6 +153,7 @@ margin:0;
 }
 .social i{
 text-align: center;
+line-height: 
 justify-content:center;
 }
 
@@ -176,33 +177,33 @@ border-radius: 50%;
 }
 
 .fa-facebook {
-  background: #4267B2;
-  color: white;
+  color: #4267B2;
+  
 }
 
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+  color: #55ACEE;
+  
 }
 
 .fa-youtube {
-  background: #bb0000;
-  color: white;
+  color: #bb0000;
+  
 }
 
 .fa-instagram {
-  background: #125688;
-  color: white;
+  color: #125688;
+  
 }
 
 .fa-pinterest {
-  background: #cb2027;
-  color: white;
+  color: #cb2027;
+  
 }
 
 .fa-envelope {
-  background: #25B2AF;
-  color: white;
+  color: #25B2AF;
+ 
 }
 
 .fecha{
