@@ -102,6 +102,25 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.tapas img{
+  width: 100%;
+  height: auto;
+}
+
+.leidas img{
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1300px;
+}
+
+.hemeroteca img{
+  width: 100%;
+  height: auto;
+}
+
 .clima{
   justify-content: center;
   align-items: center;
