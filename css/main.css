@@ -292,7 +292,28 @@ border-radius: 50%;
 }
 
 
+                     /*FOOTER*/
 
+.foot li{
+  list-style-type: none;
+}
+.logofoot img{
+  width: 100%;
+  height: auto;
+}
+
+.logofoot span{
+  font-size: 12px;
+  text-align: right;
+}
+
+.seccionesfoot a{
+  color:black;
+}
+
+.contactfoot a {
+  color:black;
+}
 
  /* ==========================================================================
    Helper classes
