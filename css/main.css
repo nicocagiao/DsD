@@ -112,11 +112,17 @@ textarea {
 
 
                                   /*FORMATO IMAGENES*/
-.tapas img{
+
+.slick-prev, .slick-next {
+  background-color: grey;
+}
+
+
+.tapasslider img{
   width: 100%;
   height: auto;
 }
-  
+
 .leidas img{
   width: 100%;
   height: auto;
@@ -172,25 +178,10 @@ margin:0;
   transition: 1s ease;
 }
 
-.notas a span{
-  position: absolute;
-  bottom:-5px;
-  left:0;
-  right:0;
-  background: rgba(0,0,0,0.3);
-  color:white;
-  padding: 15px;
-  line-height: normal;
-  transition: 1s;
-}
+                                  /*EPIGRAFE DE FOTOS*/
 
-.notas:hover a span{
-  bottom:45px;
-}
-.notas a{
-  position: relative;
-  overflow: hidden;
-}
+
+
 
 
                                     /*BANNERS*/
