@@ -18,6 +18,7 @@
     line-height: 1.4;
 }
 
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -113,14 +114,31 @@ textarea {
 
                                   /*FORMATO IMAGENES*/
 
-.slick-prev, .slick-next {
-  background-color: grey;
+.logo img{
+  width:100%;
 }
 
+.slick-prev:before, .slick-next:before {
+  color: grey;
+}
+
+.slick-prev:before {
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  font-size: 20px;
+  content:"\f0d9";
+}
+.slick-next:before {
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  font-size: 20px;
+  content:"\f0da";
+}
 
 .tapasslider img{
   width: 100%;
-  height: auto;
+  height: 250px;
+
 }
 
 .leidas img{
@@ -132,6 +150,7 @@ textarea {
   width: 100%;
   height: auto;
 }
+
 
 
                                   /*WIDGET DEL CLIMA*/
@@ -154,8 +173,32 @@ margin:0;
 .secciones{
   padding:0;
 }
+
+.botonefect {
+  transition: 0.25s;
+}
+.botonefect:hover,
+.botonefect:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #1D1E22;
+  transform: translateY(-0.25em);
+  filter:brightness(110%);
+}
+
+.navbar-brand {
+  font-family: helvetica;
+}
+
+
      
                                   /*FORMATO NOTAS*/
+
+.notas h2{
+  font-family: 'Lato', sans-serif;
+}
+
+.notas p{
+  font-family: 'Roboto', sans-serif;
+}
 
 .notas a{
   color:black;
@@ -163,7 +206,7 @@ margin:0;
 }
 
 .notas a:hover{
-  color:grey;
+  color:#0074C4;
 }
 
 .notas img{
@@ -177,6 +220,16 @@ margin:0;
   filter: brightness(110%);
   transition: 1s ease;
 }
+
+                                      /*Efecto sombra notas*/
+.sombra {
+  transition: box-shadow .3s;
+      
+}
+.sombra:hover {
+  box-shadow: 0px -6px 30px -8px rgba(33,33,33,.2); 
+}
+
 
                                   /*EPIGRAFE DE FOTOS*/
 
@@ -293,7 +346,7 @@ border-radius: 50%;
   height: auto;
 }
 
-.logofoot span{
+.lookingfoot span{
   font-size: 12px;
   text-align: right;
 }
@@ -306,9 +359,32 @@ border-radius: 50%;
   color:black;
 }
 
+                                      /*Contacto*/
+
+
+.contacto {
+  
+  padding:10% 15%;
+}
+
+#exampleFormControlTextarea1 {
+  height: 200px;
+  resize: none;
+}
+
+#needs-validation button
+{
+  width:auto;
+  }
+
+
+
  /* ==========================================================================
    Helper classes
    ========================================================================== */
+
+
+
 
 /*
  * Hide visually and from screen readers
