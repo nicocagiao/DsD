@@ -205,7 +205,7 @@ margin:0;
   text-decoration: none;
 }
 
-.notas a:hover{
+.notas a:hover {
   color:#0074C4;
 }
 
@@ -221,6 +221,25 @@ margin:0;
   transition: 1s ease;
 }
 
+.cintillo {
+  background-color: #3498db;
+  border-radius: 5%;
+  color: white;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 1em;
+  left:10px;
+  padding: 0px 4px 0px 4px;
+  position: absolute;
+  top:5px;
+  transition: 0.2s;
+}
+
+.notas:hover .cintillo{
+  transform: translateX(10px);
+  color:white;
+}
+
                                       /*Efecto sombra notas*/
 .sombra {
   transition: box-shadow .3s;
@@ -231,10 +250,9 @@ margin:0;
 }
 
 
-                                  /*EPIGRAFE DE FOTOS*/
+                                  /*LIGHTBOX DE TAPAS*/
 
-
-
+                                  /* lightbox sin abrir */
 
 
                                     /*BANNERS*/
