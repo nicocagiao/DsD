@@ -86,7 +86,7 @@
     <h2>Página no encontrada</h2>
     <p>Parece que ha habido un error en la página que estabas buscando. Es posible que haya sido eliminada o que no exista. Haz click en el logo para regresar al DsD.</p>
 
-    <div class="robot"><img src="https://media3.giphy.com/media/L0kjIkZ3M68sQIT2TJ/giphy.gif?cid=790b76115cfa5fb2755a37754d65d07c&rid=giphy.gif" alt=""></div>
+    
 
     <div class="logo"><a href="index.html"><img src="img/logo-blanco4.png" alt=""></a></div>
 </body>
