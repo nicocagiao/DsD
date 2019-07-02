@@ -1,0 +1,3 @@
+<?php 
+INCLUDE ("encabezado.php");
+ ?>
