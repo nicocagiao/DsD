@@ -26,7 +26,7 @@
 
 				<div class="contacto">
                       <h1 class="font-weight-bold">Contactá al DsD</h1>
-      <form class="needs-validation"  >
+      <form class="needs-validation" id="formcontacto" >
   <div class="form-row">
     <div class="col-md-4">
       <label for="validationTooltip01"></label>
@@ -55,6 +55,43 @@
   
   <button class="btn btn-primary mt-5" type="submit">Enviar</button>
 </form>    
+
+
+
+<script>
+
+$(document).ready(function(){
+  //armar funcion para el envio - enviarDatos()
+  function enviarDatos(){
+    $("form").on("submit",function(event){
+      //desactivamos el evento por default (submit)
+      event.preventDefault();
+//guardamos en una variable los datos a enviar
+      var datos = $("form").serialize();
+//Una vez analizado el formulario, serialize() procede a crear una cadena de texto en la notación URL-encoded; es decir, codifica la cadena de texto para que pueda ser procesada fácilmente desde un lenguaje del lado del servidor como si se tratase de un GET pero sin la necesidad de cargar la página para obtener estos valores.
+
+      console.log(datos);
+
+      $.ajax({
+        //metodo de envio
+        "method":"POST",
+        //valores a enviar
+        "data":datos,
+        //url del archivo que recibe
+        "url":"enviarDatos.php",
+      //devolucion de los datos
+      }).done(function(respuesta){
+        $("#mensaje").html("<p>"+respuesta+"</p>");
+        //$(".divSuccess").show();
+      });
+    });
+  }
+  //ejecutar enviarDatos()
+  enviarDatos();
+});
+
+</script>
+
         </div>
 			</div>
 
