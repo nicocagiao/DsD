@@ -26,7 +26,7 @@
 
 				<div class="contacto">
                       <h1 class="font-weight-bold">Contactá al DsD</h1>
-      <form class="needs-validation" id="formcontacto" >
+      <form class="needs-validation" id="formcontacto">
   <div class="form-row">
     <div class="col-md-4">
       <label for="validationTooltip01"></label>
@@ -42,7 +42,7 @@
         Looks good!
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-4">
     <label for="exampleInputEmail1"></label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
     
@@ -53,44 +53,14 @@
   </div>
   </div>
   
-  <button class="btn btn-primary mt-5" type="submit">Enviar</button>
+  <button class="btn btn-primary mt-3" type="submit">Enviar</button>
+
+  <div class="" style="">
+    <a class="curioso"><i class="fas fa-question-circle fa-2x"></i></a>
+    <p class="mostrarcodigo" style="display:none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, accusamus aliquam voluptatem mollitia ipsam nam quaerat ad culpa. Nostrum, doloremque provident deleniti dicta numquam debitis, fuga distinctio? Corrupti, unde, a!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam fugiat illum accusamus earum veniam eum veritatis architecto quibusdam, voluptatum, necessitatibus dolorum. Fugiat quam eius beatae omnis magnam nemo ipsa totam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem itaque placeat in. Assumenda cupiditate eum, dicta necessitatibus ex inventore similique maiores impedit id sequi, a ut quibusdam, excepturi nostrum ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut non, in eius molestias dolorum harum eveniet dignissimos mollitia, asperiores, aliquam voluptatum laboriosam ipsum consequuntur nihil cumque rem dolor dolore, autem.</p>
+  </div>
 </form>    
 
-
-
-<script>
-
-$(document).ready(function(){
-  //armar funcion para el envio - enviarDatos()
-  function enviarDatos(){
-    $("form").on("submit",function(event){
-      //desactivamos el evento por default (submit)
-      event.preventDefault();
-//guardamos en una variable los datos a enviar
-      var datos = $("form").serialize();
-//Una vez analizado el formulario, serialize() procede a crear una cadena de texto en la notación URL-encoded; es decir, codifica la cadena de texto para que pueda ser procesada fácilmente desde un lenguaje del lado del servidor como si se tratase de un GET pero sin la necesidad de cargar la página para obtener estos valores.
-
-      console.log(datos);
-
-      $.ajax({
-        //metodo de envio
-        "method":"POST",
-        //valores a enviar
-        "data":datos,
-        //url del archivo que recibe
-        "url":"enviarDatos.php",
-      //devolucion de los datos
-      }).done(function(respuesta){
-        $("#mensaje").html("<p>"+respuesta+"</p>");
-        //$(".divSuccess").show();
-      });
-    });
-  }
-  //ejecutar enviarDatos()
-  enviarDatos();
-});
-
-</script>
 
         </div>
 			</div>
@@ -114,6 +84,55 @@ $(document).ready(function(){
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+
+<!-- CODIGO DEL REVEAL EN HOVER -->
+  <script>
+    $(document).ready(function(){
+
+      $(".curioso").hover(function(){
+        $(".mostrarcodigo").slideToggle();
+      });
+
+
+    });
+  </script>
+
+<!-- SCRIPT PARA EL ENVIO DEL MAIL -->
+
+
+<script>
+
+$(document).ready(function(){
+  //armar funcion para el envio - enviarDatos()
+  function enviarDatos(){
+    $("form").on("submit",function(event){
+      //desactivamos el evento por default (submit)
+      event.preventDefault();
+//guardamos en una variable los datos a enviar
+      var datos=$("form").serialize();
+//Una vez analizado el formulario, serialize() procede a crear una cadena de texto en la notación URL-encoded; es decir, codifica la cadena de texto para que pueda ser procesada fácilmente desde un lenguaje del lado del servidor como si se tratase de un GET pero sin la necesidad de cargar la página para obtener estos valores.
+
+      console.log(datos);
+
+      $.ajax({
+        //metodo de envio
+        "method":"POST",
+        //valores a enviar
+        "data":datos,
+        //url del archivo que recibe
+        "url":"enviarDatos.php",
+      //devolucion de los datos
+      }).done(function(respuesta){
+        $("#mensaje").html("<p>"+respuesta+"</p>");
+        //$(".divSuccess").show();
+      });
+    });
+  }
+  //ejecutar enviarDatos()
+  enviarDatos();
+});
+
+</script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 

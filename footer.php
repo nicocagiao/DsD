@@ -1,13 +1,3 @@
-<!doctype html>
-<html class="no-js" lang="">
-
-<head>
-  <meta charset="utf-8">
-  <title>Footer</title>
-</head>
-
-<body>
-
                       <!--FOOTER -->
 
 <footer class="container-fluid bg-light foot shadow mt-4">
@@ -16,7 +6,7 @@
     <div class="col-lg-2 col-md-4 logofoot text-right">
       <img src="img/logo-blanco4.png" alt="">
 
-      <span class="derechos">Copyright 2000-2019 © Todos los derechos reservados</span>
+      <span class="derechos">&copy; 2000-<?php echo date("Y"); ?> - Todos los derechos reservados</span>
       
     </div>
     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
@@ -31,12 +21,12 @@
     </div>
     <div class="col-lg-2 col-md-4 col-sm-6 col-6">
       <ul class="contactfoot">
-        <li class="contactlist"><a href="404.html">Institucional</a></li>
-        <li class="contactlist"><a href="404.html">Comercial</a></li>
-        <li class="contactlist"><a href="404.html">Cartas al DsD</a></li>
-        <li class="contactlist"><a href="contacto.html">Contacto</a></li>
-        <li class="contactlist"><a href="404.html">Hemeroteca</a></li>
-        <li class="contactlist"><a href="404.html">Mapa de Medios</a></li>
+        <li class="contactlist"><a href="404.php">Institucional</a></li>
+        <li class="contactlist"><a href="404.php">Comercial</a></li>
+        <li class="contactlist"><a href="404.php">Cartas al DsD</a></li>
+        <li class="contactlist"><a href="contacto.php">Contacto</a></li>
+        <li class="contactlist"><a href="404.php">Hemeroteca</a></li>
+        <li class="contactlist"><a href="404.php">Mapa de Medios</a></li>
       </ul>
      
     </div>
@@ -63,7 +53,7 @@ Código Postal: C1103ACM</span>
 
     <a href="https://ar.pinterest.com/eldsd/" target="_blank"><i class="fab fa-2x fa-pinterest"></i></a>
 
-    <a href="mailto:info@dsd.com" target="_top"><i class="far fa-2x fa-envelope"></i></a>
+    <a href="mailto:nico@cagiao.com" target="_top"><i class="far fa-2x fa-envelope"></i></a>
 
     <a href="https://www.youtube.com/user/DiarioSobreDiarios?feature=watch" target="_blank" role="button">
     <i class="fab fa-2x fa-youtube"></i></a>

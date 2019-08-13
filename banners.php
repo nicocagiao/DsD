@@ -1,13 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="">
 
-<head>
-  <meta charset="utf-8">
-  <title>Banners</title>
-  <?php INCLUDE ("formato.php"); ?>
-</head>
-
-<body>
  
   <div class="col-3 d-none d-lg-block">
         <div class="col-12 banner">
@@ -22,6 +13,3 @@
       </div>
     </section>
 </div>
-
-</body>
-</html>
