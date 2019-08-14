@@ -7,9 +7,9 @@ $email=$_POST['email'];
 $mensaje=$_POST['mensaje'];
 
 //Configurar la funcion mail()
-$destinatario="nicolas@cagiao.com";
+$destinatario="nico.cagiao@gmail.com";
 $asunto="Correo nuevo desde el sitio";
-$cuerpoMensaje="Nombre: ".$nombre."<br> Email:".$email."<br> Localidad: ".$localidad."<br> Mensaje: <i>".$mensaje."</i>";
+$cuerpoMensaje="Nombre: ".$nombre."<br> Email:".$email."<br> Apellido: ".$apellido."<br> Mensaje: <i>".$mensaje."</i>";
 //echo $cuerpoMensaje;
 
 //Cabeceras adicionales
@@ -26,7 +26,8 @@ $cabeceras .= 'From: '.$nombre.' <'.$email.'>' . "\r\n";
 if($envio==true){
 	echo "<div class='alert alert-success animated tada'>Gracias ".$nombre." por contactarnos. <br> Te respondemos a la brevedad</div>";
 }else{
-	echo "<div class='alert alert-danger animated wobble'> Hola".$nombre.", hubo un error en el envío. Intenta nuevamente :( </div>";
+	echo "<div class='alert alert-danger animated wobble'> Hola ".$nombre.", hubo un error en el envío. Intenta nuevamente :( </div>";
+	//echo $cuerpoMensaje;
 }
 
 

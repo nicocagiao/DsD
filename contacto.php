@@ -30,34 +30,42 @@
   <div class="form-row">
     <div class="col-md-4">
       <label for="validationTooltip01"></label>
-      <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre" value="" required>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre" name="nombre" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4">
       <label for="validationTooltip02"></label>
-      <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellido" value="" required>
+      <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellido" name="apellido" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="form-group col-md-4">
     <label for="exampleInputEmail1"></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email">
     
   </div>
   <div class="col-12">
     <label for="exampleFormControlTextarea1"></label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ingresá tu mensaje"></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" placeholder="Ingresá tu mensaje"></textarea>
   </div>
   </div>
   
   <button class="btn btn-primary mt-3" type="submit">Enviar</button>
-
+  <div id="mensaje"></div>
   <div class="" style="">
     <a class="curioso"><i class="fas fa-question-circle fa-2x"></i></a>
-    <p class="mostrarcodigo" style="display:none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, accusamus aliquam voluptatem mollitia ipsam nam quaerat ad culpa. Nostrum, doloremque provident deleniti dicta numquam debitis, fuga distinctio? Corrupti, unde, a!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam fugiat illum accusamus earum veniam eum veritatis architecto quibusdam, voluptatum, necessitatibus dolorum. Fugiat quam eius beatae omnis magnam nemo ipsa totam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem itaque placeat in. Assumenda cupiditate eum, dicta necessitatibus ex inventore similique maiores impedit id sequi, a ut quibusdam, excepturi nostrum ratione.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut non, in eius molestias dolorum harum eveniet dignissimos mollitia, asperiores, aliquam voluptatum laboriosam ipsum consequuntur nihil cumque rem dolor dolore, autem.</p>
+    <pre class="mostrarcodigo" style="display:none">
+    $(document).ready(function(){
+      $(".curioso").hover(function(){
+        $(".mostrarcodigo").slideToggle();
+      });
+    });
+      </pre>
+
+   
   </div>
 </form>    
 
@@ -112,8 +120,6 @@ $(document).ready(function(){
       var datos=$("form").serialize();
 //Una vez analizado el formulario, serialize() procede a crear una cadena de texto en la notación URL-encoded; es decir, codifica la cadena de texto para que pueda ser procesada fácilmente desde un lenguaje del lado del servidor como si se tratase de un GET pero sin la necesidad de cargar la página para obtener estos valores.
 
-      console.log(datos);
-
       $.ajax({
         //metodo de envio
         "method":"POST",
@@ -123,8 +129,9 @@ $(document).ready(function(){
         "url":"enviarDatos.php",
       //devolucion de los datos
       }).done(function(respuesta){
-        $("#mensaje").html("<p>"+respuesta+"</p>");
+        $("#mensaje").html(respuesta);
         //$(".divSuccess").show();
+        
       });
     });
   }
