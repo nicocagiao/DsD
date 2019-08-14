@@ -241,7 +241,18 @@ INCLUDE ("encabezado.php");
   gtag('config', 'UA-145025994-1');
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
+<script>
+    $(document).ready(function(){
+        //Fancybox
+        $(".tapasslider a").attr("data-fancybox","utn");
+        $(".tapasslider a").fancybox({
+            //opciones
+            loop:true,
+        });
+    });
+</script>
  									
 
  									<!--BOOTSTRAP -->

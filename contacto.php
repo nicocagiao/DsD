@@ -19,42 +19,57 @@
 
 
 <div class="container mt-3">
-	
+<div id="mensaje"></div>
 <section class="row">
 
 			<div class="col-lg-9 col-sm-12">
 
 				<div class="contacto">
                       <h1 class="font-weight-bold">Contactá al DsD</h1>
-      <form class="needs-validation"  >
+      <form class="needs-validation" id="formcontacto">
   <div class="form-row">
     <div class="col-md-4">
       <label for="validationTooltip01"></label>
-      <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre" value="" required>
+      <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre" name="nombre" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
     <div class="col-md-4">
       <label for="validationTooltip02"></label>
-      <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellido" value="" required>
+      <input type="text" class="form-control" id="validationTooltip02" placeholder="Apellido" name="apellido" required>
       <div class="valid-tooltip">
         Looks good!
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-4">
     <label for="exampleInputEmail1"></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email">
     
   </div>
   <div class="col-12">
     <label for="exampleFormControlTextarea1"></label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ingresá tu mensaje"></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" placeholder="Ingresá tu mensaje"></textarea>
   </div>
   </div>
   
-  <button class="btn btn-primary mt-5" type="submit">Enviar</button>
+  <button class="btn btn-primary mt-3" type="submit">Enviar</button>
+  
+  <div class="" style="">
+    <a class="curioso"><i class="fas fa-question-circle fa-2x"></i></a>
+    <pre class="mostrarcodigo" style="display:none">
+    $(document).ready(function(){
+      $(".curioso").hover(function(){
+        $(".mostrarcodigo").slideToggle();
+      });
+    });
+      </pre>
+
+   
+  </div>
 </form>    
+
+
         </div>
 			</div>
 
@@ -77,6 +92,54 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+
+<!-- CODIGO DEL REVEAL EN HOVER -->
+  <script>
+    $(document).ready(function(){
+
+      $(".curioso").hover(function(){
+        $(".mostrarcodigo").slideToggle();
+      });
+
+
+    });
+  </script>
+
+<!-- SCRIPT PARA EL ENVIO DEL MAIL -->
+
+
+<script>
+
+$(document).ready(function(){
+  //armar funcion para el envio - enviarDatos()
+  function enviarDatos(){
+    $("form").on("submit",function(event){
+      //desactivamos el evento por default (submit)
+      event.preventDefault();
+//guardamos en una variable los datos a enviar
+      var datos=$("form").serialize();
+//Una vez analizado el formulario, serialize() procede a crear una cadena de texto en la notación URL-encoded; es decir, codifica la cadena de texto para que pueda ser procesada fácilmente desde un lenguaje del lado del servidor como si se tratase de un GET pero sin la necesidad de cargar la página para obtener estos valores.
+
+      $.ajax({
+        //metodo de envio
+        "method":"POST",
+        //valores a enviar
+        "data":datos,
+        //url del archivo que recibe
+        "url":"enviarDatos.php",
+      //devolucion de los datos
+      }).done(function(respuesta){
+        $("#mensaje").html(respuesta);
+        //$(".divSuccess").show();
+        
+      });
+    });
+  }
+  //ejecutar enviarDatos()
+  enviarDatos();
+});
+
+</script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 

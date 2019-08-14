@@ -88,7 +88,6 @@
 
     
 
-    <div class="logo"><a href="index.html"><img src="img/logo-blanco4.png" alt=""></a></div>
+    <div class="logo"><a href="index.php"><img src="img/logo-blanco4.png" alt=""></a></div>
 </body>
 </html>
-<!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
