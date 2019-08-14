@@ -19,7 +19,7 @@
 
 
 <div class="container mt-3">
-	
+<div id="mensaje"></div>
 <section class="row">
 
 			<div class="col-lg-9 col-sm-12">
@@ -54,7 +54,7 @@
   </div>
   
   <button class="btn btn-primary mt-3" type="submit">Enviar</button>
-  <div id="mensaje"></div>
+  
   <div class="" style="">
     <a class="curioso"><i class="fas fa-question-circle fa-2x"></i></a>
     <pre class="mostrarcodigo" style="display:none">
