@@ -222,6 +222,35 @@ INCLUDE ("encabezado.php");
 
        ?>
 
+                            <!--BOTON CARGAR NOTA -->
+
+<div class="fixed-bottom">
+     <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#exampleModalLong">
+  Cargar nota
+</button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+       <?php INCLUDE ("carganota.php"); ?>
+      <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         </button>
+      </div>
+
+      <div class="modal-body">
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
                               <!--JavaScripts -->
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
