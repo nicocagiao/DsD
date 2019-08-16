@@ -17,11 +17,11 @@ INCLUDE ("encabezado.php");
           $query1=mysqli_query($conexion,$query_string);
           echo mysqli_num_rows($query1); //1
           $notaportada=mysqli_fetch_array($query1);
-          ?>
+ ?>
 
 
-<div class="row">
-	<div class="col-lg-8 col-md-10 col-sm-12">
+<div class="row container-fluid">
+	<div class="container-fluid col-lg-8 col-md-10 col-sm-12">
 		           
             <img src="<?php echo $notaportada['foto']; ?>" alt="">
             <h2><?php echo $notaportada["titulo"]; ?></h2>

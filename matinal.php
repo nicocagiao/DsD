@@ -17,6 +17,7 @@ INCLUDE ("encabezado.php");
           $query1=mysqli_query($conexion,$query_string);
           echo mysqli_num_rows($query1); //1
           $notaportada=mysqli_fetch_array($query1);
+
           ?>
 
 
@@ -28,9 +29,10 @@ INCLUDE ("encabezado.php");
 			<div class="col-lg-6 col-md-8 col-sm-12">
 				<div class="row">
 
-					<article class="col-12 notas sombra">
+
+<article class="col-12 notas sombra">
                     
-                    <a href="noticia.php?id=<?php echo $notaportada['id'] ?>">
+                    <a href="noticia.php?id=<?php echo $notaportada['titulo'] ?>">
             
             <img src="<?php echo $notaportada['foto']; ?>" alt="">
             <h2><?php echo $notaportada["titulo"]; ?></h2>
@@ -38,12 +40,13 @@ INCLUDE ("encabezado.php");
         </a>      
           <p><?php echo $notaportada["bajada"];?></p>
                     <hr>
-                </article> 
+ </article> 
 
-				
+
+
 				<article class="col-6 notas sombra">
 
-          <a href="noticia.php?id=<?php echo $notaportada['id'] ?>">
+          <a href="noticia.php?id=<?php echo $notaportada['titulo'] ?>">
             
             <img src="<?php echo $notaportada['foto']; ?>" alt="">
             <h2><?php echo $notaportada["titulo"]; ?></h2>
@@ -110,8 +113,6 @@ INCLUDE ("encabezado.php");
 
 
 
-
-
  <!--TERCERA COLUMNA CON BANNERS -->
 
 <?php INCLUDE ("banners.php") ?>
@@ -122,5 +123,7 @@ INCLUDE ("encabezado.php");
  <?php 
 INCLUDE ("footer.php");
   ?>
+
+
 </body>
 </html>

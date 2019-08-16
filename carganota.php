@@ -72,5 +72,45 @@
   </div>
 					<input type="submit" value="Cargar Nota">
 				</form>	
-
+<div id="mensaje"></div>
 			</div>
+
+<script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+
+			<script>
+
+$(document).ready(function(){
+  //armar funcion para el envio - enviarDatos()
+  function enviarDatos(){
+    $("form").on("submit",function(event){
+      //desactivamos el evento por default (submit)
+      event.preventDefault();
+//guardamos en una variable los datos a enviar
+      var datos=$("form").serialize();
+//Una vez analizado el formulario, serialize() procede a crear una cadena de texto en la notación URL-encoded; es decir, codifica la cadena de texto para que pueda ser procesada fácilmente desde un lenguaje del lado del servidor como si se tratase de un GET pero sin la necesidad de cargar la página para obtener estos valores.
+
+      $.ajax({
+        //metodo de envio
+        "method":"POST",
+        //valores a enviar
+        "data":datos,
+        //url del archivo que recibe
+        "url":"enviarnota.php",
+      //devolucion de los datos
+      }).done(function(respuesta){
+        $("#mensaje").html(respuesta);
+        //$(".divSuccess").show();
+        
+      });
+    });
+  }
+  //ejecutar enviarDatos()
+  enviarDatos();
+});
+
+</script>
