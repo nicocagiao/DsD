@@ -1,16 +1,14 @@
-<div id="contenedor">
+<div class="container">
 			<header>
 				<h1>Nueva nota</h1>
 			</header>
 			 
-			<div class="cajas">	
+			<div>	
 				<form action="enviarnota.php" method="POST">
 
-
-					<div class="form-group">
-					<label for="">
-						Titulo
-						<input type="text" name="titulo">
+	
+					<div>
+					<label for="">Titulo<input type="text" name="titulo" class="form-control">
 					</label>
 					</div>
 
@@ -18,9 +16,10 @@
 					<div class="form-group">
 					<label for="">
 						Bajada
-						<input type="text" name="bajada">
+						<input type="text" name="bajada" class="form-control">
 					</label>
 					</div>
+
 
 
 					<div class="form-group">
@@ -47,6 +46,7 @@
 						<input type="text" name="cintillo">
 					</label>
 					</div>
+
 
 
 					<div class="form-group">

@@ -226,7 +226,7 @@ INCLUDE ("encabezado.php");
 
 <div class="fixed-bottom">
      <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#exampleModalLong">
+<button type="button" class="btn btn-danger btn-rounded" data-toggle="modal" data-target="#exampleModalLong">
   Cargar nota
 </button>
 </div>
